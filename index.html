@@ -3,17 +3,58 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>actividad web</title>
+    <title>El Reino de Dino Rey</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="contenedor" id="contenido">
-        <h1 class="bienvenida">¡Bienvenido a mi página!</h1>
-        <img src="bienvenido.png" alt="Imagen de ejemplo" class="imagen" />
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q47bdwX5NAE?si=f2T_UpBPwFDMqs4q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
+    <header class="encabezado-reino">
+        <!-- Ruta actualizada apuntando a la carpeta 'imagen' -->
+        <img src="imagen/logodino.png" alt="Logo Dino Rey" class="logo-principal" />
+        <p class="subtitulo">El soberano más temido de la era prehistórica</p>
+    </header>
+
+    <main class="contenedor" id="contenido">
+        <section class="seccion-rey">
+            <!-- Ruta actualizada apuntando a la carpeta 'imagen' -->
+            <img src="imagen/dinorey.jpg" alt="Dino Rey, el soberano prehistórico" class="imagen-rey" id="dinoImg" />
+            <p class="descripcion">
+                Desde el corazón de la selva jurásica, Dino Rey gobierna con
+                fuerza y sabiduría sobre todas las criaturas de su tiempo.
+                Descubre su historia y su reino.
+            </p>
+        </section>
+
+        <section class="seccion-video">
+            <h2>Explora su reino</h2>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ayQPsFyKzfc?si=_Ny560rG3Fo90wTr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="seccion-interaccion">
+            <h2>Elige un ataque</h2>
+            <div class="botones-ataque">
+                <button class="boton-ataque" id="gabu-btn">
+                    <span>⚡ Ataque de Gabu</span>
+                    <img src="imagen/gabu.png" alt="Gabu" class="icono-boton" />
+                </button>
+                <button class="boton-ataque" id="ace-btn">
+                    <img src="imagen/ace.png" alt="Ace" class="icono-boton" />
+                    <span>🌪️ Ataque de Ace</span>
+                </button>
+                <button class="boton-ataque" id="paris-btn">
+                    <span>🌿 Ataque de Paris</span>
+                    <img src="imagen/paris.png" alt="Paris" class="icono-boton" />
+                </button>
+            </div>
+            <p id="mensaje-rugido" class="mensaje-rugido"></p>
+        </section>
+    </main>
+
+    <footer class="pie-reino">
+        <p>&copy; 2026 Reino de Dino Rey — Todos los derechos rugidos</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

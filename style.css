@@ -1,64 +1,201 @@
-/* Estilo general y fondo de pantalla */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  /* Reemplaza 'background.jpg' por el nombre de la imagen que quieras usar de fondo */
-  background-image: url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    color: #f4ecd8;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+        url('imagen/fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
-/* Contenedor principal para centrar los elementos */
-.contenedor {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Fondo blanco semi-transparente */
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  max-width: 600px;
-  width: 90%;
+.encabezado-reino {
+    text-align: center;
+    padding: 40px 20px 20px;
 }
 
-/* Estilo para el título de bienvenida */
+.logo-principal {
+    max-width: 280px;
+    width: 100%;
+    filter: drop-shadow(2px 2px 6px #000);
+}
+
 .bienvenida {
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 2rem;
+    font-size: 2.5rem;
+    color: #e8b84b;
+    text-shadow: 2px 2px 4px #000;
+    letter-spacing: 1px;
 }
 
-/* Estilo para la imagen que agregaste en el HTML (bienvenido.png) */
-.imagen {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 20px;
+.subtitulo {
+    margin-top: 10px;
+    font-style: italic;
+    color: #c9d6b9;
 }
 
-/* Contenedor del video de YouTube */
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.seccion-rey {
+    background: rgba(27, 67, 50, 0.75);
+    border: 3px solid #d4a017;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+}
+
+.imagen-rey {
+    max-width: 100%;
+    width: 320px;
+    border-radius: 12px;
+    border: 4px solid #d4a017;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.descripcion {
+    margin-top: 15px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #f4ecd8;
+}
+
+.seccion-video {
+    text-align: center;
+}
+
+.seccion-video h2 {
+    color: #e8b84b;
+    margin-bottom: 15px;
+}
+
 .video {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* Proporción 16:9 */
-  height: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
+    max-width: 100%;
+    border: 3px solid #5c4326;
+    border-radius: 12px;
+}
+
+.seccion-interaccion {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.botones-ataque {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.boton-ataque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #d4a017;
+    color: #1b4332;
+    font-weight: bold;
+    font-size: 1.05rem;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.icono-boton {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.boton-ataque:hover {
+    background-color: #f2c14e;
+    transform: scale(1.05);
+}
+
+#gabu-btn {
+    background-color: #4a90d9;
+    color: #f4ecd8;
+}
+
+#gabu-btn:hover {
+    background-color: #6ba9e8;
+}
+
+#ace-btn {
+    background-color: #a8b5bd;
+    color: #1b4332;
+}
+
+#ace-btn:hover {
+    background-color: #c2ced4;
+}
+
+#paris-btn {
+    background-color: #4caf7d;
+    color: #f4ecd8;
+}
+
+#paris-btn:hover {
+    background-color: #6dc99a;
+}
+
+.mensaje-rugido {
+    margin-top: 20px;
+    min-height: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tarjeta-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.tarjeta-ataque img {
+    max-width: 160px;
+    width: 100%;
+    border-radius: 12px;
+    border: 3px solid #d4a017;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.texto-ataque {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e8b84b;
+    text-shadow: 1px 1px 3px #000;
+    text-align: center;
+}
+
+.pie-reino {
+    text-align: center;
+    padding: 20px;
+    color: #c9d6b9;
+    font-size: 0.85rem;
 }
